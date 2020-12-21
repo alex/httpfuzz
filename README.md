@@ -1,7 +1,7 @@
 # `httpfuzz`
 
-`httpfuzz` is a project which wires libFuzzer (via Atheris) to WSGI in order to
-use fuzzing to look for bugs and vulnerabilities.
+`httpfuzz` is a project which wires libFuzzer (via Atheris) to Python's WSGI in
+order to use fuzzing to look for bugs and vulnerabilities.
 
 At the moment this is more of a tech-demo than something likely to find a ton
 of vulnerabilities, but perhaps you'll send a PR to extend it or be inspired to
