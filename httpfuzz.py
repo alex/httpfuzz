@@ -14,7 +14,7 @@ def fuzz_request(data, wsgi_app):
     method = fdp.PickValueInList(["GET", "POST", "PUT", "HEAD", "DELETE", "OPTIONS", "TRACE", "PATCH"])
 
     url_length = fdp.ConsumeUInt(2)
-    url = urllib.parse.quote(fdp.ConsumeBytes(url_length))
+    url = urllib.parse.quote(fdp.ConsumeBytes(url_length), safe='/?&=%')
 
     c = Client(wsgi_app, BaseResponse)
     resp = c.open(path=url, method=method)
