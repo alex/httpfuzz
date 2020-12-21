@@ -39,6 +39,9 @@ dictionary from regexp objects. They can then be passed to the fuzzer:
 $ python demoapp.py -dict=re.dict
 ```
 
+A more systemic (and automatic) solution is [tracked in the Atheris bug
+tracker](https://github.com/google/atheris/issues/5).
+
 ### HTTP features
 
 `httpfuzz` currently only generates request URLs and different HTTP methods. It
